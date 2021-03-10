@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>WYBIERZ MIEJSCE DOCELOWE</h1>
+    <form th:object="${ytPlaylist}">
+        <a th:href="${'/youtube/to_spotify/' + ytPlaylist}">Spotify</a>
+    </form>
+    <form th:action="@{/youtube/to_file}" th:object="${ytPlaylist}">
+        <a>file</a>
+    </form>
+</body>
+</html>
